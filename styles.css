@@ -20,7 +20,7 @@ img {
 
 article ul li {
     list-style-type: none;
-    margin: 0;
+
     padding: 0;
     line-height: 2em;
     
@@ -28,6 +28,7 @@ article ul li {
 article ul {
     padding: 0;
     list-style: none;
+    margin: 0;
 
 }
 
@@ -39,7 +40,7 @@ body {
     color:#19FA1C;
     background-color: #f9f9f9;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
    text-align: center;
      background-color: black;
 }
@@ -55,14 +56,16 @@ h1, h3 {
 h2 {
     color: #002F00;
     background-color: #008E00;
+    padding: 15px 20px;
+    margin: 20px 0;
 }
 
 main {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-bottom: 50px;
-
+    gap: 120px;
+    margin-bottom: 80px;
+    margin-top: 40px;
 }
 a {
     text-decoration: none;

@@ -4,6 +4,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    border: 3px solid #19FA1C;
 }
 
 #banner {
@@ -12,7 +13,10 @@
     margin: 0 auto;
 }
 
-
+img {
+    width: 25%;
+    height: auto;
+}
 
 article ul li {
     list-style-type: none;
@@ -23,34 +27,44 @@ article ul li {
 }
 article ul {
     padding: 0;
+    list-style: none;
+
 }
 
 body {
-    font-family: 'Andika', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     font-size: 18px;
     line-height: 1.6;
-    color: #333333;
+    color:#19FA1C;
     background-color: #f9f9f9;
     margin: auto;
     padding: 20px;
    text-align: center;
+     background-color: black;
 }
 h1 {
     font-size: 36px;
 }
-h1, h2, h3 {
-  font-family: "Luckiest Guy", cursive;
-  font-weight: 400;
+h1, h3 {
+  font-family: "roboto", sans-serif;
+  font-weight: 600;
   font-style: normal;
-    color: #222222;
+    color:#19FA1C;
+}
+h2 {
+    color: #002F00;
+    background-color: #008E00;
 }
 
 main {
     display: flex;
     justify-content: center;
     gap: 80px;
+    margin-bottom: 50px;
 
 }
 a {
     text-decoration: none;
+    color: #19FA1C;
 }

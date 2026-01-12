@@ -4,7 +4,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    border: 3px solid #19FA1C;
+    border: 3px solid #19fa1c;
 }
 
 #banner {
@@ -18,12 +18,21 @@ img {
     height: auto;
 }
 
+
 article ul li {
     list-style-type: none;
 
     padding: 0;
     line-height: 2em;
     
+}
+article ul li:hover {
+    background-color:#19fa1c ;
+    
+}
+ul li a:hover {
+    color: #002F00;
+    background-color:#19fa1c ;
 }
 article ul {
     padding: 0;
@@ -34,7 +43,7 @@ article ul {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 18px;
     line-height: 1.6;
     color:#19FA1C;
@@ -49,7 +58,7 @@ h1 {
 }
 h1, h3 {
   font-family: "roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
     color:#19FA1C;
 }
@@ -70,4 +79,38 @@ main {
 a {
     text-decoration: none;
     color: #19FA1C;
+}
+
+#spin {
+    width: 300px;
+    animation: spin 4s linear infinite;
+    vertical-align: middle;
+}
+#spin-reverse {
+    width: 300px;
+    animation: spin-reverse 4s linear infinite;
+    vertical-align: middle;
+}
+#interact-icon:hover {
+    vertical-align: middle;
+    animation: wiggle .7s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-15deg); }
+    60% { transform: rotate(15deg); }
+    80% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
 }

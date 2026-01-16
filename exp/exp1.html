@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Experiment 1
+    </h1>
+    <h2>
+        Open html with Chrome browser, right click and select "inspect" option and then navigate to "console" tab.  
+    </h2>
+    <script>
+    //     // The program below creates a triangular pattern of # symbols in the console, each line of the pattern has one more # than the previous and is repeated until 8 consecutive iterations are completed.
+    // var text = "#";
+   
+    // for (var i = 1; i<7; i++) {   /* The loop here is the 'for' loop which loops and repeats the text variable "#"*/
+    // var result = text.repeat (i);
+    //  console.log(result);
+    // } 
+
+    // //The program below will make every other letter in the text uppercase.
+    var text = "Hello World";
+    var finalText = '';
+    
+    for( var i = 0 ; i < text.length; i++){  /* Loop: "For" loop for adding letters to the final text variable*/
+        if (i % 2 == 0) {                      /* Sequence: Step 1 - for loop, Step 2 - check if the letter is in the even or odd position using modulo and uppercase/lowercase accordingly, Step 3 - console log the final result*/
+         finalText += text[i].toUpperCase(); /* Selection: "IF" loop*/
+        } else {
+            finalText += text[i];
+        }
+    } 
+    console.log(finalText);
+    </script>
+</body>
+</html>

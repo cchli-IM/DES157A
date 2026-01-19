@@ -16,17 +16,54 @@
 img {
     width: 25%;
     height: auto;
+    transform: scaleX(-1);
 }
 
-article p {
-    width: 400px;
-}
+
 article ul li {
     list-style-type: none;
 
     padding: 0;
     line-height: 2em;
     
+}
+.pspacing {
+    padding: 0 140px;
+}
+#link {
+    padding: 10px;
+    border:1px solid #19fa1c ;
+}
+#link a {
+    display: block;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+#link:hover {
+    padding: 10px;
+    background-color: #19FA1C;
+    transform: scale(1.4);
+}
+#link a:hover {
+    color: #002F00;
+}
+article h3 {
+    margin: 10px 300px
+}
+article {
+    max-width: 800px;
+    border-bottom: 1px solid #19fa1c;
+     border-top: 1px solid #19fa1c;
+      background-color: #001d00;
+}
+article p {
+    text-align: left;
+  line-height: 1.8em;
+    padding: 0 20px;
+   
+}
+.time {
+    text-align: center;
 }
 article ul li:hover {
     background-color:#19fa1c ;
@@ -69,10 +106,10 @@ h1, h3 {
     color:#19FA1C;
 }
 h2 {
-    color: #002F00;
+    color: #000000;
     background-color: #008E00;
     padding: 15px 20px;
-    margin: 5px 0;
+    margin: 20px;
 }
 
 main {
@@ -87,20 +124,9 @@ a {
     color: #19FA1C;
 }
 
-#spin {
-    width: 300px;
-    animation: spin 4s linear infinite;
-    vertical-align: middle;
-}
-#spin-reverse {
-    width: 300px;
-    animation: spin-reverse 4s linear infinite;
-    vertical-align: middle;
-}
-#interact-icon:hover {
-    vertical-align: middle;
-    animation: wiggle .7s ease-in-out infinite;
-}
+
+
+
 footer {
     gap: 40px;
     padding: 0;
@@ -108,24 +134,5 @@ footer {
     font-size: 10px;
     display: flex;
     justify-content: center;
- 
-
-}
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes spin-reverse {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-}
-
-@keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(15deg); }
-    40% { transform: rotate(-15deg); scale: 2; }
-    60% { transform: rotate(15deg); scale: 2; }
-    80% { transform: rotate(-15deg); }
-    100% { transform: rotate(0deg); }
+    margin-top: 20px;
 }

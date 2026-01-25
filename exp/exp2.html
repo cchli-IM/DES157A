@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   
+<body>
+    <h1>
+        Experiment 2
+    </h1>    
+    <h2>
+        COLOR DISPLAY
+    </h2>
+    <!-- The following code asks the user to guess from a list of colors that the computer has in mind. The results of the experiment will change depending on whether the user is right or not -->
+    <script>
+        function computerColor (){
+            var colorList = ["red","blue", "yellow", "green", "violet", "orange", "indigo"] //If you don't want to leave things up to chance, then just delete all but one color from the array and input that color
+            var random = colorList.length * Math.random();
+            var compCol = Math.floor(random);
+           
+            return colorList[compCol];
+        }
+
+        function checkCol (){
+             var yourColor = prompt("What color am I thinking of? (Note: pick from ROYGBIV, and type in lowercase only)", "");
+            var trueColor = computerColor();
+             if (trueColor === yourColor){
+                var rightColor = document.querySelector('h2');
+                rightColor.style.fontSize = "42px"
+                rightColor.style.color = "white";
+                rightColor.innerHTML = "That is the right color!"
+                var rightBackground = document.querySelector('body');
+                rightBackground.style.backgroundColor = trueColor;
+             } else {
+              var wrongColor = document.querySelector('h2');
+                wrongColor.style.fontSize = "42px"
+                wrongColor.style.color = "black";
+                wrongColor.innerHTML = "That is the WRONG color!"
+             }
+        }
+        checkCol();
+    </script>
+</body>
+</html>

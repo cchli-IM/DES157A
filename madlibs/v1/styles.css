@@ -49,11 +49,11 @@ section {
 }
 
 #madlib-questions {
-    display: none;
+    display: block;
 }
 
 #madlib-output {
-    display: block;
+    display: none;
 }
 
 form input, form label {

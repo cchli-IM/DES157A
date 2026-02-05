@@ -9,7 +9,7 @@
         const bodyPart = document.querySelector("#bodyPart").value;
         const adverb = document.querySelector("#adverb").value;
         const firearm = document.querySelector("#firearm").value;
-        const noun = document.querySelector("#noun").value;
+        const characterDesc = document.querySelector("#characterDesc").value;
         const placeName = document.querySelector("#placeName").value;
         const animal = document.querySelector("#animal").value;
         const madlibQuestions = document.querySelector("#madlib-questions");
@@ -17,31 +17,31 @@
 
         let madlibText = '';
         if (adj == ''){
-            myText = "please provide an adjective";
-            document.querySelector('#adj').focus();
+            madlibText = "please provide an adjective";
+            document.querySelector('#adjective').focus();
         } else if (bodyPart == ''){
-            myText = "please provide a body part";
+            madlibText = "please provide a body part";
             document.querySelector('#bodyPart').focus();
         } else if (adverb == ''){
-            myText = "please provide an adverb";
+            madlibText = "please provide an adverb";
             document.querySelector('#adverb').focus();
         } else if (firearm == ''){
-            myText = "please select a firearm";
+            madlibText = "please select a firearm";
             document.querySelector('#firearm').focus();
-        } else if (noun == ''){
-            myText = "please select a noun";
-            document.querySelector('#noun').focus();
+        } else if (characterDesc == ''){
+            madlibText = "please provide a character description";
+            document.querySelector('#characterDesc').focus();
         } else if (placeName == ''){
-            myText = "please select a place name";
+            madlibText = "please provide a place name";
             document.querySelector('#placeName').focus();
         } else if (animal == ''){
-            myText = "please select an animal";
+            madlibText = "please provide an animal";
             document.querySelector('#animal').focus();
         } else {
-        const madlibText = `It was a ${adj} day at the wild wild west. Birds are singing, and flowers are blooming. You enter the town saloon and sitting in the corner was the infamous outlaw, one ${bodyPart}ed Cole. "Come on out with your hands up Cole, we've got unfinished business". One ${bodyPart}ed cole eyed the revolver in his holster, but before he could act, you pulled out your trusty ${firearm} and ${adverb} shot his cowboy hat off of his head. Both of his hands shot up as he surrendered to your skill and ${noun}. You are applauded for your handy work as ${placeName} town's number one bounty hunter. You climb onto the back of your ${animal} and rode into the sunset.`
+            madlibText = `It was a <span>${adj}</span> day at the wild wild west. Birds are singing, and flowers are blooming. You enter the town saloon and sitting in the corner was the infamous outlaw, one <span>${bodyPart}'d</span> Cole. "Come on out with your hands up Cole, we've got unfinished business". One <span>${bodyPart}'d</span> cole eyed the revolver in his holster, but before he could act, you pulled out your trusty <span>${firearm}</span> and <span>${adverb}</span> shot his cowboy hat off of his head. Both of his hands shot up as he surrendered to your skill and <span>${characterDesc}</span>. You are applauded for your handy work as <span>${placeName}</span> town's number one bounty hunter. You climb onto the back of your <span>${animal}</span> and rode into the sunset.`;
         }
         madlibQuestions.style.display = 'none';
         madlibOutput.style.display = "block";
-    })
-    madlib.innerHTML = madlibText;
+        madlib.innerHTML = madlibText;
+    });
 })()

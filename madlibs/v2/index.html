@@ -17,11 +17,15 @@
         <h1> Wild Wild MadLib</h1>
     </header>
     <main>
-        <section>
-            <h2>
-                Wanted: Dead or Alive
+        <section id="wanted-poster">
+            <h2 id="wanted-title">
+                WANTED
             </h2>
-            <img src="#" alt="Cowboy Hat">
+            <img src="images/wanted_poster.png" alt="Wanted Poster">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole1">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole2">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole3">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole4">
         </section>
 
         <section id="madlib-questions">
@@ -45,8 +49,8 @@
                     <option value="pistol">Pistol</option>
                 </select>
 
-                <label for="noun" >noun: </label>
-                <input type="text" name="noun" id="noun" required>
+                <label for="characterDesc" >Physical Trait (ex: big ears): </label>
+                <input type="text" name="characterDesc" id="characterDesc" required>
 
 
                 <label for="placeName" >Place Name: </label>

@@ -75,7 +75,7 @@ section {
 #myForm {
     max-width: 300px;  
     margin: 0 auto;  
-    padding-left: 160px; 
+    padding-left: 150px; 
 }
 #madlib-questions {
     display: block;
@@ -120,12 +120,6 @@ form input, form label {
     display: block;
 }
 
-form input {
-    margin-bottom: 1em;
-}
-form label{
-    margin-bottom: 5px;
-}
 span {
     font-weight: bold;;
 }
@@ -134,9 +128,6 @@ footer{
 }
 form input, form label, form select, form button {
     font-family: "Homenaje", sans-serif;
-}
-form select {
-    margin-bottom: 5px;
 }
 form label{
     font-size: 18px;

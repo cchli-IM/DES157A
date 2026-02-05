@@ -15,12 +15,33 @@ h1 {
     font-style: normal;
     text-align: center;
 }
+#wanted-poster{
+    position: relative;
+    margin: 0;
+}
+#wanted-title {
+    position: absolute;
+    top: 73px;
+    left: 46%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 10;
+    font-size: 50px;
+}
+
 body {
     color: #333;
     line-height: 1.5em;
     margin: 0;
 }
-
+#wanted-poster img {
+    margin-left: 65px;
+} 
+input[type="text"]:focus {
+    background-color: rgb(240, 230, 194);
+    border-style: double;
+    border-color: rgb(162, 66, 66);
+}
 img {
     display: block;
     max-width: 100%;
@@ -37,10 +58,13 @@ header, footer {
 
 main {
     display: flex;
-    width: 900px;
+    width: 1200px;
     margin: auto;
-   
+    background-image: url(images/tabletop.png);
     box-sizing: border-box;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 section {
@@ -48,22 +72,108 @@ section {
     padding: 40px;
 }
 
+#myForm {
+    max-width: 300px;  
+    margin: 0 auto;  
+    padding-left: 150px; 
+}
 #madlib-questions {
     display: block;
+    background-image: url(images/paperbackground1.png);
+    background-size: contain;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 380px;
+    padding: 60px 40px 40px 40px;
+    min-height: 526px;
 }
-
+#madlib-questions h2 {
+    text-align: center; 
+    margin-top: 0;
+}
 #madlib-output {
     display: none;
+    background-image: url(images/paperbackground1.png);
+    background-size: contain;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 380px;
+    padding: 70px 40px;  
+    min-height: 486px;
 }
+#madlib-output p{
+    font-size: large;
+    text-align: justify;  
+    line-height: 1.8; 
+    width: 65%;
+    margin: 0 auto;  
+}
+#madlib-output h2 {
+    text-align: center;  
+    margin-top: 0;
+}
+
 
 form input, form label {
     display: block;
 }
 
-form input {
-    margin-bottom: 1em;
-}
-
 span {
     font-weight: bold;;
+}
+footer{
+    height: 0;
+}
+form input, form label, form select, form button {
+    font-family: "Homenaje", sans-serif;
+}
+form label{
+    font-size: 18px;
+}
+form button {
+   padding: 10px;
+   margin: 10px;
+   margin-left: 30px;
+}
+.bullet-hole {
+    position: absolute;
+    width: 140px;  
+    height: 140px;
+    opacity: 0;
+    z-index: 15;
+}
+
+#hole1 {
+    top: 80px;
+    left: 100px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#hole2 {
+    top: 200px;
+    left: 40px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 1s;
+}
+
+#hole3 {
+    top: 250px;
+    left: 200px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 1.5s;
+}
+#hole4 {
+    top: 40px;
+    left: 30px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
 }

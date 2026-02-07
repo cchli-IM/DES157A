@@ -18,11 +18,13 @@ h1 {
 #wanted-poster{
     position: relative;
     margin: 0;
+    flex: 0 0 auto; 
+    padding: 40px 20px; 
 }
 #wanted-title {
     position: absolute;
     top: 73px;
-    left: 46%;
+    left: 190px;
     transform: translateX(-50%);
     margin: 0;
     z-index: 10;
@@ -33,14 +35,20 @@ body {
     color: #333;
     line-height: 1.5em;
     margin: 0;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
 }
 #wanted-poster img {
-    margin-left: 65px;
+    margin-left: 0; 
+    margin: 0 auto; 
+ 
 } 
 input[type="text"]:focus {
     background-color: rgb(240, 230, 194);
     border-style: double;
     border-color: rgb(162, 66, 66);
+   
 }
 img {
     display: block;
@@ -48,34 +56,48 @@ img {
     height: auto;
 }
 
-header, footer {
+header {
     background-color: #ccc;
     text-align: center;
-    height: 125px;
-    display: grid;
-    place-content: center;
+    height: 85px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 40px; 
+    position: relative;
 }
-
+header h1 {
+    margin: 0;
+}
+header img {
+    width: 100px; 
+    height: auto;
+}
 main {
     display: flex;
-    width: 1200px;
+    width: 100%;
     margin: auto;
     background-image: url(images/tabletop.png);
     box-sizing: border-box;
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    flex: 1; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 60px; 
 }
 
 section {
-    flex: 1;
-    padding: 40px;
+  
+    padding: 40px 20px;
 }
 
 #myForm {
     max-width: 300px;  
     margin: 0 auto;  
-    padding-left: 150px; 
+    padding-left: 50px; 
+    
 }
 #madlib-questions {
     display: block;
@@ -83,14 +105,16 @@ section {
     background-size: contain;  
     background-position: center; 
     background-repeat: no-repeat;
-    margin: auto;
+    margin: 20px;
     width: 380px;
-    padding: 60px 40px 40px 40px;
-    min-height: 526px;
+    padding: 50px 40px 30px 40px;
+    min-height: 490px;
+    flex: 0 0 auto; 
 }
 #madlib-questions h2 {
     text-align: center; 
     margin-top: 0;
+    margin-bottom: 15px;
 }
 #madlib-output {
     display: none;
@@ -118,6 +142,7 @@ section {
 
 form input, form label {
     display: block;
+    margin-bottom: 15px;
 }
 
 span {
@@ -131,11 +156,22 @@ form input, form label, form select, form button {
 }
 form label{
     font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+form input {
+    width: 250px;
+    background-color: #eedad1;
+}
+form input, form select{
+    width: 250px;
+    background-color: #eedad1;
+    margin-bottom: 8px;
 }
 form button {
-   padding: 10px;
-   margin: 10px;
-   margin-left: 30px;
+    padding: 10px;
+    margin: 5px 10px; 
+    margin-left: 75px;
 }
 .bullet-hole {
     position: absolute;

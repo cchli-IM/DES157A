@@ -1,6 +1,19 @@
 (function(){
     "use strict";
     console.log("JS Running");
+    const animButton = document.querySelector("#sunset-animation-button")
+    animButton.addEventListener("click", function(){
+        const overlay = document.querySelector("#animation-overlay");
+        overlay.style.display = "block"
+    });
+
+    const close = document.querySelector("#animation-overlay a");
+    close.addEventListener("click", function(event) {
+        event.preventDefault();
+        const overlay = document.querySelector("#animation-overlay");
+        overlay.style.display = "none";
+    });
+
     const myForm = document.querySelector("#myForm");
     myForm.addEventListener("submit", function(event){
         event.preventDefault();

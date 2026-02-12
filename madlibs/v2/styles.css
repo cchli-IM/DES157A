@@ -176,6 +176,20 @@ form button {
     padding: 10px;
     margin: 5px 10px; 
     margin-left: 75px;
+    background-color: #e8c470;
+    color: #333;
+    border-color: #8c6126;
+    border-width: 3px;
+}
+
+form button:hover{
+    padding: 10px;
+    margin: 5px 10px; 
+    margin-left: 75px;
+    background-color: #ffeaba;
+     color: #333;
+     border-color: #c6852a;
+     border-width: 5px;
 }
 .bullet-hole {
     position: absolute;
@@ -278,8 +292,22 @@ form button {
    bottom: 80px;
     left: 370px;
     padding: 5px;
+    background-color: #e8c470;
+    color: #333;
+    border-color: #8c6126;
+    border-width: 3px;
 }
-
+#sunset-animation-button:hover {
+    position: absolute;
+    bottom: 80px;
+     left: 370px;
+     padding: 5px;
+     background-color: #ffeaba;
+     color: #333;
+     border-color: #c6852a;
+     border-width: 5px;
+ }
+ 
 #cowboy{
     position: absolute;
     top: 26%;

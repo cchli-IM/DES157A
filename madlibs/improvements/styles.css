@@ -1,0 +1,333 @@
+p  {
+    font-family: "Homenaje", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2 {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+      
+}
+h1 {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: rgb(240, 232, 232);
+}
+#wanted-poster{
+    position: relative;
+    margin: 0;
+    flex: 0 0 auto; 
+    padding: 40px 20px; 
+}
+#wanted-title {
+    position: absolute;
+    top: 73px;
+    left: 190px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 10;
+    font-size: 50px;
+}
+
+body {
+    color: #333;
+    line-height: 1.5em;
+    margin: 0;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+}
+#wanted-poster img {
+    margin-left: 0; 
+    margin: 0 auto; 
+ 
+} 
+input[type="text"]:focus {
+    background-color: rgb(240, 230, 194);
+    border-style: double;
+    border-color: rgb(162, 66, 66);
+   
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #ccc;
+    text-align: center;
+    height: 85px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 40px; 
+    position: relative;
+    background-image: url(images/woodbeam.png);
+}
+header h1 {
+    margin: 0;
+}
+header img {
+    width: 100px; 
+    height: auto;
+}
+main {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    background-image: url(images/tabletop.png);
+    box-sizing: border-box;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    flex: 1; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 60px; 
+}
+
+section {
+  
+    padding: 40px 20px;
+}
+
+#myForm {
+    max-width: 300px;  
+    margin: 0 auto;  
+    padding-left: 50px; 
+    
+}
+#madlib-questions {
+    display: block;
+    background-image: url(images/paperbackground1.png);
+    background-size: contain;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 20px;
+    width: 380px;
+    padding: 50px 40px 30px 40px;
+    min-height: 490px;
+    flex: 0 0 auto; 
+}
+#madlib-questions h2 {
+    text-align: center; 
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+#madlib-output {
+    display: none;
+    background-image: url(images/paperbackground1.png);
+    background-size: contain;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    margin: 20px;
+    width: 380px;
+    padding: 50px 40px 30px 40px; 
+    min-height: 470px;
+    flex: 0 0 auto; 
+    
+}
+#madlib-output p{
+    font-size: large;
+    text-align: justify;  
+    line-height: 1.8; 
+    width: 65%;
+    margin: 0 auto;  
+}
+#madlib-output h2 {
+    text-align: center;  
+    margin-top: 0;
+}
+
+
+form input, form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+span {
+    font-weight: bold;;
+}
+footer{
+    height: 0;
+}
+form input, form label, form select, form button {
+    font-family: "Homenaje", sans-serif;
+}
+form label{
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+form input {
+    width: 250px;
+    background-color: #eedad1;
+}
+form input, form select{
+    width: 250px;
+    background-color: #eedad1;
+    margin-bottom: 8px;
+}
+form button {
+    padding: 10px;
+    margin: 5px 10px; 
+    margin-left: 75px;
+    background-color: #e8c470;
+    color: #333;
+    border-color: #8c6126;
+    border-width: 3px;
+}
+
+form button:hover{
+    padding: 10px;
+    margin: 5px 10px; 
+    margin-left: 75px;
+    background-color: #ffeaba;
+     color: #333;
+     border-color: #c6852a;
+     border-width: 5px;
+}
+.bullet-hole {
+    position: absolute;
+    width: 140px;  
+    height: 140px;
+    opacity: 0;
+    z-index: 15;
+}
+
+#hole1 {
+    top: 80px;
+    left: 100px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#hole2 {
+    top: 200px;
+    left: 40px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 1s;
+}
+
+#hole3 {
+    top: 250px;
+    left: 200px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 1.5s;
+}
+#hole4 {
+    top: 40px;
+    left: 30px;
+    animation: appear 0.3s ease forwards;
+    animation-delay: 2s;
+}
+#animation-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.886);
+    z-index: 9999; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#animation-overlay article {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 85vh;
+    height: 85vh;
+    overflow: hidden
+}
+
+#animation-overlay img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#animation-overlay p {
+    position: absolute;
+    bottom: 90px;
+    left: -15;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#animation-overlay a {
+    position: absolute; 
+    top: -500px; 
+    right: 400px; 
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#animation-overlay a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#sunset-animation-button {
+   position: absolute;
+   bottom: 80px;
+    left: 370px;
+    padding: 5px;
+    background-color: #e8c470;
+    color: #333;
+    border-color: #8c6126;
+    border-width: 3px;
+}
+#sunset-animation-button:hover {
+    position: absolute;
+    bottom: 80px;
+     left: 370px;
+     padding: 5px;
+     background-color: #ffeaba;
+     color: #333;
+     border-color: #c6852a;
+     border-width: 5px;
+ }
+ 
+#cowboy{
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    animation: bounce .7s ease-in-out infinite;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 5px));
+    } 
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs concept 1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Rye&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/skull.png" alt="buffalo">
+        <h1> Wild Wild MadLib</h1>
+        <img src="images/skull.png" alt="buffalo">
+    </header>
+    <main>
+        <section id="wanted-poster">
+            <h2 id="wanted-title">
+                WANTED
+            </h2>
+            <img src="images/wanted_poster.png" alt="Wanted Poster">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole1">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole2">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole3">
+            <img src="images/hole.png" alt="bullet hole" class="bullet-hole" id="hole4">
+        </section>
+
+        <section id="madlib-questions">
+            <h2>MadLib Questions</h2>
+            <form id="myForm">
+                <label for="adjective">Adjective: </label>
+                <input type="text" name="adjective" id="adjective" required>
+
+                <label for="bodyPart">Body Part: </label>
+                <input type="text" name="bodyPart" id="bodyPart" required>
+
+                <label for="adverb" >Adverb: </label>
+                <input type="text" name="adverb" id="adverb" required>
+
+                <label for="firearm">Firearm: </label>
+                <select name="firearm" id="firearm" required>
+                    <option value="" selected>---</option>
+                    <option value="revolver">Revolver</option>
+                    <option value="rifle">Rifle</option>
+                    <option value="shotgun">Shotgun</option>
+                    <option value="pistol">Pistol</option>
+                </select>
+
+                <label for="characterDesc" >Physical Trait (ex: big ears): </label>
+                <input type="text" name="characterDesc" id="characterDesc" required>
+
+
+                <label for="placeName" >Place Name: </label>
+                <input type="text" name="placeName" id="placeName" required>
+
+                <label for="animal" >Animal: </label>
+                <input type="text" name="animal" id="animal" required>
+
+                <button type="submit">Generate MadLib</button>
+            </form>
+        </section>
+        <section id="madlib-output">
+            <h2>MadLib Output</h2>
+            <p></p>
+            <button id="sunset-animation-button">Into The Sunset</button>
+          
+        </section>
+     <!-- overlay at 750 x 560 -->
+        <section id="animation-overlay"> 
+            <article>
+                <img id="sunset" src="images/sunset.png" alt="Ride into the sunset">
+                <img id="cowboy" src="images/cowboy.png" alt="cowboy">
+                <p>Yet another day at the wild, wild west.</p>
+                <p><a href="#">x</a></p>
+            </article>
+            
+        </section>
+
+        <footer>
+
+        </footer>   
+
+
+    </main>
+
+</body>
+</html>

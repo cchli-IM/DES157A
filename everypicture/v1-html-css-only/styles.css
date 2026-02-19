@@ -14,4 +14,19 @@ p {
     font-family: "Metrophobic", sans-serif;
   font-weight: 400;
   font-style: normal;
+  display: none;
+}
+
+article{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+article img {
+    flex: 1;
+    width: 0;           
+    height: 60vh;       
+    object-fit: cover;  
 }

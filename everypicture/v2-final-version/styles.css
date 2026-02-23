@@ -15,6 +15,14 @@ p {
   font-weight: 400;
   font-style: normal;
   display: none;
+  font-size: 16px;
+  text-align: left;
+  align-items: center;
+  padding: 10px 400px;
+  line-height: 1.6em;
+}
+#hint {
+    text-align: center;
 }
 
 article{
@@ -28,5 +36,12 @@ article img {
     flex: 1;
     width: 0;           
     height: 60vh;       
-    object-fit: cover;  
+    object-fit: cover;
+    transition: flex 0.3s ease; 
+}
+
+article img:hover {
+    flex: 3; 
+    border: double rgba(255, 255, 255, 0.75);
+    
 }

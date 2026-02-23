@@ -23,23 +23,14 @@ article{
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    height: calc(60vh + 20px);
+    overflow: hidden;
 }
 article img {
     flex: 1;
     width: 0;
     height: 60vh;
     object-fit: cover;
-    transition: flex 0.6s cubic-bezier(.25,.8,.25,1);
-}
-
-article:hover img {
-    flex: 1;
-}
-
-article img:hover {
-    flex: 5; 
-    cursor: pointer; 
+    transition: width 0.4s ease, opacity 0.4s ease;
 }
 
 #hint {

@@ -23,10 +23,16 @@ article{
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 article img {
     flex: 1;
-    width: 0;           
-    height: 60vh;       
-    object-fit: cover;  
+    width: 0;
+    height: 60vh;
+    object-fit: cover;
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+#hint {
+    display: block;
 }

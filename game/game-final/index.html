@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ruins N' Glory</title>
+</head>
+<body>
+    <!-- Player and NPC Images -->
+    <header>Ruins N' Glory</header>
+  
+    <section id="start-screen">
+        <h2>Do you have what it takes to explore the <strong>Great Ruins of Chrysalithia</strong>?</h2>
+        <button id="begin">Enter</button>
+
+        <label for="volume">Volume <input type="checkbox" name="volume" id="volume-option"></label>
+    </section>
+   <!-- NPC Information -->
+   <main id="upperscreen">
+        <section class="npc-visuals">
+            <img src="#" alt="NPC Character">
+
+            <section id="context-box">
+                <p>Proceed with caution!</p> <!-- Placeholder -->
+            </section>
+        </section>
+        <section id="ncp-info">
+                <h2 id="npc-name">
+                    NPC Name Placeholder
+                </h2>
+                <article id="npc-stats">
+                    <h2 >
+                        Health: <section id="health"><img id="pl-health-bar" src="" alt=""></section>
+                    </h2>
+                    <h2>
+                        Status Effects: <section id="npc-poison-status"></section> <section id="npc-cursed-status"></section>
+                    </h2>
+                </article>
+        </section>
+    </main>
+
+    <!-- Player Information -->  
+     <section class="character-visuals">
+        <img src="#" alt="Player Character">
+    </section>
+
+    <section id="pl-info">
+        <h2 id="npc-name"> <!-- Default placeholder, should be changeable-->
+            Player
+        </h2>
+        <article id="pl-stats">
+            <h2 >
+                Health: <section id="health"><img id="pl-health-bar" src="" alt=""></section>
+            </h2>
+            <h2>
+                Status Effects: <section id="pl-poison-status"></section><section id="pl-cursed-status"></section>
+            </h2>
+        </article>
+    </section>
+
+  
+    
+ 
+    
+    <section id="slots">
+        
+    </section>
+
+
+</body>
+</html>

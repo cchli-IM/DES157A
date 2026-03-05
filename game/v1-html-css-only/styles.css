@@ -1,0 +1,25 @@
+#upperscreen {
+    height: 50vh; 
+    width: 100%;
+}
+
+.npc-visuals {
+    display: flex;
+    height: 100%; 
+    width: 100%;
+}
+
+.npc-visuals > img {
+    flex: 2; 
+    height: 100%;
+    object-fit: cover;
+}
+
+#context-box {
+    flex: 1; 
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem; 
+    background-color: #eee; 
+    overflow-y: auto; 
+}

@@ -5,72 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Ruins N' Glory</title>
 </head>
 <body>
     <!-- Player and NPC Images -->
-    <header>Ruins N' Glory</header>
-  
-    <section id="start-screen">
-        <h2>Do you have what it takes to explore the <strong>Great Ruins of Chrysalithia</strong>?</h2>
-        <button id="begin">Enter</button>
-
-        <label for="volume">Volume <input type="checkbox" name="volume" id="volume-option"></label>
-    </section>
-   <!-- NPC Information -->
-   <main id="upperscreen">
-        <section class="npc-visuals">
-            <img src="#" alt="NPC Character">
-
-            <section id="context-box">
-                <p>Proceed with caution!</p> <!-- Placeholder -->
-            </section>
-        </section>
-        <section id="ncp-info">
-                <h2 id="npc-name">
-                    NPC Name Placeholder
-                </h2>
-                <article id="npc-stats">
-                    <h2 >
-                        Health: <section id="health"><img id="pl-health-bar" src="" alt=""></section>
-                    </h2>
-                    <h2>
-                        Status Effects: <section id="npc-poison-status"></section> <section id="npc-cursed-status"></section>
-                    </h2>
-                </article>
-        </section>
-    </main>
-
-    <!-- Player Information -->  
-     <section class="character-visuals">
-        <img src="#" alt="Player Character">
-    </section>
-
-    <section id="pl-info">
-        <h2 id="npc-name"> <!-- Default placeholder, should be changeable-->
-            Player
-        </h2>
-        <article id="pl-stats">
-            <h2 >
-                Health: <section id="health"><img id="pl-health-bar" src="" alt=""></section>
-            </h2>
-            <h2>
-                Status Effects: <section id="pl-poison-status"></section><section id="pl-cursed-status"></section>
-            </h2>
-        </article>
-    </section>
 
   
+    <section id="start-screen" class="show">
+        <h1>Ruins N' Glory</h1>
+        <a href="#" id="begin-button">Enter</a>
+
+        <label for="volume" id="volume">Volume <input type="checkbox" name="volume" id="volume-option"></label>
+        <label for="skip-intro">Skip Intro <input type="checkbox" name="skip-intro" id="skip-intro"></label>
     
- 
-    
-    <section id="slots">
         
     </section>
+    <section id="intro-screen" class="hidden">
+            <h2 id="intro-question">Do you have what it takes to conquer the <strong>Great Ruins of Chrysalithia</strong>? <br> Your adventure begins now...</h2>
+    </section>
+   <!-- NPC Information -->
+    <main id="game-screen" class="hidden">
+        <main id="upperscreen">
+                <section id="ncp-info">
+                       <section class="npc-visuals">
+                    <img src="#" alt="NPC Character">
+                </section>
+                        <h2 id="npc-name">
+                            NPC Name Placeholder
+                        </h2>
+                        <article id="npc-stats">
+                            <h2>Health: <span id="npc-health-text">100/100</span></h2>
+                            <section class="health-bar-container">
+                                <section id="npc-health-bar" class="health-bar"></section>
+                            </section>
+                            <h2>
+                                Status Effects:  <section class="status-text"></section>
+                            </h2>
+                        </article>
+                         
+                </section> 
+                    <!-- Context Box -->
+                <section id="context-box">
+                        <p>Proceed with caution!</p> <!-- Placeholder -->
+                </section>
+            </main>
+         
 
+            <!-- Player Information -->  
+            <section class="character-visuals">
+                <img src="#" alt="Player Character">
+            </section>
+
+            <section id="lowerscreen">
+                <section id="pl-info">
+                    <h2 id="pl-name"> <!-- Default placeholder, should be changeable-->
+                        Player
+                    </h2>
+                    <article id="pl-stats">
+                        <h2>Health: <span id="pl-health-text">100/100</span></h2>
+                        <section class="health-bar-container">
+                            <section id="pl-health-bar" class="health-bar"></section>
+                        </section>
+                        <h2>
+                            Status Effects: <section class="status-text"></section>
+                        </h2>
+                    </article>
+                </section>
+
+            
+                
+            
+                <section id="slots">
+                    
+                    <section id="dice">
+
+                    </section>
+                    
+                    <section id="act">
+                        
+                    </section>
+                    
+                </section>
+             </section>
+     </main>
 
 </body>
 </html>

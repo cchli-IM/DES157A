@@ -1,16 +1,72 @@
+
+body {
+    overflow: hidden;
+}
+
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+h1{
+ font-family: "Eagle Lake", serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  font-size: 48px;
+}
+
+
+#begin-button, #volume{
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bolder;
+     font-family: "Grenze", serif;
+     font-weight: 600;
+     font-style: normal;
+}
+#begin-button {
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+
 #upperscreen {
     height: 50vh; 
     width: 100%;
+    display: flex;
+}
+
+#lowerscreen {
+    height: 50vh; 
+    width: 100%;
+    display: flex;
+}
+
+#pl-info {
+    flex:1;
+}
+#slots{
+    flex:2
+}
+
+#ncp-info {
+    flex: 2;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
 }
 
 .npc-visuals {
     display: flex;
-    height: 100%; 
-    width: 100%;
+    flex: 1;
+    height: auto;
 }
 
 .npc-visuals > img {
-    flex: 2; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -23,3 +79,87 @@
     background-color: #eee; 
     overflow-y: auto; 
 }
+
+#intro-screen{
+    color: #eee;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    animation: fadeIn 8.5s ease-in-out forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+@keyframes fadeIn {
+    0%{ opacity: 0; }
+    10%{ opacity: 1; }
+    85%{ opacity: 1; }
+    100%{ opacity: 0; }
+}
+
+#intro-question{
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    animation: fadeInQ 8.5s ease-in-out forwards;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    z-index: 100;
+}
+@keyframes fadeInQ {
+    0%{ opacity: 0; }
+    10%{ opacity: 0; }
+    20%{ opacity: 1; }
+    70%{ opacity: 1; }
+    85%{ opacity: 0; }
+    100%{ opacity: 0; }
+}
+
+
+#start-screen{
+    align-items: center;
+    text-align: center;
+}
+
+.health-bar-container {
+    width: 400px;
+    height: 25px;
+    background-color: #ccc;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.health-bar {
+    height: 100%;
+    background-color: #28a745;
+    width: 100%;
+    transition: width 0.4s ease;
+    position: relative;
+}
+#roll {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#roll:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+

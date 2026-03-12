@@ -46,12 +46,11 @@
 
         introScreen.className = 'show';
 
-        // Hide start screen once intro has fully faded in (10% of 8500ms = 850ms)
+    
         setTimeout(function() {
             startScreen.className = 'hidden';
         }, 850);
 
-        // Show game screen exactly when intro begins fading out (85% of 8500ms = 7225ms)
         setTimeout(function() {
             gameScreen.className = 'show';
             introScreen.className = 'hidden';
@@ -60,7 +59,7 @@
     });
 
     function setUpTurn(){
-        // Clear previous defending states
+       
         if (gameData.plDefending) {
             gameData.plDefending = false;
             plStatus.innerHTML = '';

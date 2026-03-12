@@ -20,8 +20,8 @@
         <h1>Ruins N' Glory</h1>
         <a href="#" id="begin-button">Enter</a>
 
-        <label for="volume" id="volume">Volume <input type="checkbox" name="volume" id="volume-option"></label>
-        <label for="skip-intro">Skip Intro <input type="checkbox" name="skip-intro" id="skip-intro"></label>
+        <button id="bgm-btn">Main Menu Music</button>
+
     
         
     </section>
@@ -31,40 +31,38 @@
    <!-- NPC Information -->
     <main id="game-screen" class="hidden">
         <main id="upperscreen">
-                <section id="ncp-info">
-                       <section class="npc-visuals">
-                    <img src="#" alt="NPC Character">
-                </section>
-                        <h2 id="npc-name">
-                            NPC Name Placeholder
-                        </h2>
+                <div id="npc-frame-wrapper">
+                    <img id="npc-frame-img" src="images/NPC Frame.png" alt="">
+                    <section id="ncp-info">
+                        <section class="npc-visuals">
+                            <img src="images/goblinstand.png" alt="NPC Character">
+                        </section>
                         <article id="npc-stats">
+                            <h2 id="npc-name">Monster: Gobbo</h2>
                             <h2>Health: <span id="npc-health-text">100/100</span></h2>
                             <section class="health-bar-container">
                                 <section id="npc-health-bar" class="health-bar"></section>
                             </section>
                             <h2>
-                                Status Effects:  <section class="status-text"></section>
+                                Status Effects: <span class="status-text"></span>
                             </h2>
                         </article>
-                         
-                </section> 
-                    <!-- Context Box -->
+                    </section>
+                </div>
+                <!-- Context Box -->
                 <section id="context-box">
-                        <p>Proceed with caution!</p> <!-- Placeholder -->
+                    <p>Proceed with caution!</p> <!-- Placeholder -->
                 </section>
             </main>
          
 
-            <!-- Player Information -->  
-            <section class="character-visuals">
-                <img src="#" alt="Player Character">
-            </section>
-
             <section id="lowerscreen">
                 <section id="pl-info">
-                    <h2 id="pl-name"> <!-- Default placeholder, should be changeable-->
-                        Player
+                    <section class="character-visuals">
+                        <img src="images/playerpic.jpg" alt="Player Character">
+                    </section>
+                    <h2 id="pl-name"> 
+                       Player: The Venerable Sir Orphaneater III
                     </h2>
                     <article id="pl-stats">
                         <h2>Health: <span id="pl-health-text">100/100</span></h2>
@@ -72,7 +70,7 @@
                             <section id="pl-health-bar" class="health-bar"></section>
                         </section>
                         <h2>
-                            Status Effects: <section class="status-text"></section>
+                            Status Effects: <span class="status-text"></span>
                         </h2>
                     </article>
                 </section>

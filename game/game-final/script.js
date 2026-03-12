@@ -16,6 +16,7 @@
 
     const bgmBtn = document.querySelector("#bgm-btn");
     const bgmSound = new Audio('sounds/bgm.mp3');
+    const dieSound = new Audio('sounds/die.mp3');
    
 
     bgmBtn.addEventListener('mousedown', function () {
@@ -83,6 +84,7 @@
     }
 
     function throwDice(){
+        dieSound.play();
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
         dice.innerHTML = `<img src="${gameData.dieFace[gameData.roll1-1]}"> 

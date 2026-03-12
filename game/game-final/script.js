@@ -16,7 +16,7 @@
 
     const bgmBtn = document.querySelector("#bgm-btn");
     const bgmSound = new Audio('sounds/bgm.mp3');
-    const ambient = new Audio('sounds/ambientmusic.mp3');
+   
 
     bgmBtn.addEventListener('mousedown', function () {
         bgmSound.play();
@@ -122,7 +122,9 @@
                 setUpTurn();
             } else {
                 act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() { npcTurn(); }, 1500);
+                setTimeout(function() { 
+                    npcTurn(); 
+                }, 1500);
             }
         } else if (gameData.skipNextTurn === true) {
             gameData.skipNextTurn = false;
@@ -130,7 +132,9 @@
                 setUpTurn();
             } else {
                 act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() { npcTurn(); }, 1500);
+                setTimeout(function() { 
+                    npcTurn(); 
+                }, 1500);
             }
         } else {
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
@@ -145,7 +149,9 @@
                     contextbox.innerHTML += `<p>NPC's turn...</p>`;
                 }, 1000);
                 act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() { npcTurn(); }, 2000);
+                setTimeout(function() {
+                     npcTurn(); 
+                    }, 2000);
             }
         }
     }
@@ -184,7 +190,9 @@
             npcStatus.innerHTML = '';
             gameData.npcHealth -= damage;
             npcImg.src = 'images/goblinhurt.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 1500);
+            setTimeout(function() { 
+                npcImg.src = 'images/goblinstand.png'; 
+            }, 1500);
             contextbox.innerHTML += `<p>Attack! NPC takes ${damage} damage!</p>`;
         } else {
             let damage = gameData.plDefending ? 5 : 10;
@@ -192,7 +200,9 @@
             plStatus.innerHTML = '';
             gameData.plHealth -= damage;
             npcImg.src = 'images/goblinattack.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 1500);
+            setTimeout(function() {
+                 npcImg.src = 'images/goblinstand.png'; 
+                }, 1500);
             contextbox.innerHTML += `<p>NPC attacked! You take ${damage} damage!</p>`;
         }
         updateHealthBars();
@@ -242,14 +252,18 @@
             gameData.npcPoisonRounds = 2;
             npcStatus.innerHTML = '<span>Poisoned!</span>';
             npcImg.src = 'images/goblinpoison.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 1500);
+            setTimeout(function() { 
+                npcImg.src = 'images/goblinstand.png'; 
+            }, 1500);
             contextbox.innerHTML += `<p>You poisoned the NPC!</p>`;
         } else {
             gameData.plPoisoned = true;
             gameData.plPoisonRounds = 2;
             plStatus.innerHTML = '<span>Poisoned!</span>';
             npcImg.src = 'images/goblinattack.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 1500);
+            setTimeout(
+                function() { npcImg.src = 'images/goblinstand.png'; 
+                }, 1500);
             contextbox.innerHTML += `<p>The NPC poisoned you!</p>`;
         }
     }
@@ -259,12 +273,16 @@
         if (gameData.index === 0) {
             npcStatus.innerHTML = '<span>Sloth!</span>';
             npcImg.src = 'images/goblinsloth.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 2000);
+            setTimeout(function() { 
+                npcImg.src = 'images/goblinstand.png'; 
+            }, 2000);
             contextbox.innerHTML += `<p>Sloth! The NPC loses its next turn!</p>`;
         } else {
             plStatus.innerHTML = '<span>Sloth!</span>';
             npcImg.src = 'images/goblinsloth.png';
-            setTimeout(function() { npcImg.src = 'images/goblinstand.png'; }, 2000);
+            setTimeout(function() {
+                 npcImg.src = 'images/goblinstand.png'; 
+                }, 2000);
             contextbox.innerHTML += `<p>Sloth! You lose your next turn!</p>`;
         }
     }

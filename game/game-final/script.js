@@ -57,6 +57,7 @@
             setUpTurn();
         }, 7225);
     });
+   
 
     function setUpTurn(){
        
@@ -185,7 +186,7 @@
 
     function attack() {
         if (gameData.index === 0) {
-            let damage = gameData.npcDefending ? 5 : 10;
+            let damage = gameData.npcDefending ? 10 : 20;
             gameData.npcDefending = false;
             npcStatus.innerHTML = '';
             gameData.npcHealth -= damage;
@@ -195,7 +196,7 @@
             }, 1500);
             contextbox.innerHTML += `<p>Attack! NPC takes ${damage} damage!</p>`;
         } else {
-            let damage = gameData.plDefending ? 5 : 10;
+            let damage = gameData.plDefending ? 10 : 20;
             gameData.plDefending = false;
             plStatus.innerHTML = '';
             gameData.plHealth -= damage;
@@ -224,10 +225,10 @@
 
     function heal() {
         if (gameData.index === 0) {
-            gameData.plHealth += 20;
+            gameData.plHealth += 15;
             contextbox.innerHTML += `<p>You healed 20 HP!</p>`;
         } else {
-            gameData.npcHealth += 20;
+            gameData.npcHealth += 15;
             contextbox.innerHTML += `<p>NPC healed 20 HP!</p>`;
         }
         updateHealthBars();

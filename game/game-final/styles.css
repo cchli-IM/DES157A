@@ -103,7 +103,7 @@ h1{
     margin-right: 20px;
 }
 
-.npc-visuals > img {
+.npc-visuals img {
     width: 100%;
     height: 100%;
     object-fit: contain;

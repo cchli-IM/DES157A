@@ -334,7 +334,12 @@
         npcImg.src = 'images/goblinwin.png';
         contextbox.innerHTML += `<p><strong>You have been defeated... Game Over.</strong></p>`;
     }
-    gameData.gameEnd = 1;
-}
+        contextbox.innerHTML += `<button id="retry-btn">Retry</button>`;
+            gameData.gameEnd = 1;
+
+            document.querySelector('#retry-btn').addEventListener('click', function() {
+                location.reload();
+            });
+        }
 })()
 

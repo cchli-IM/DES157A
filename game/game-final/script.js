@@ -127,50 +127,46 @@
         switchTurn();
     }
 
-    function switchTurn() {
-        if (gameData.gameEnd) return;
-        checkPoisonDamage();
+   function switchTurn() {
+    if (gameData.gameEnd) return;
+    checkPoisonDamage();
 
-        if (gameData.extraTurn === true) {
-            gameData.extraTurn = false;
-            if (gameData.index === 0) {
-                setUpTurn();
-            } else {
-                act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() { 
-                    npcTurn(); 
-                }, 1500);
-            }
-        } else if (gameData.skipNextTurn === true) {
-            gameData.skipNextTurn = false;
-            if (gameData.index === 0) {
-                setUpTurn();
-            } else {
-                act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() { 
-                    npcTurn(); 
-                }, 1500);
-            }
+    if (gameData.extraTurn === true) {
+        gameData.extraTurn = false;
+        if (gameData.index === 0) {
+            setUpTurn();
         } else {
-            gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            act.innerHTML = '<button id="roll" disabled>ROLL</button>';
+            rest.innerHTML = '<button id="rest-btn" disabled>REST</button>';
+            setTimeout(function() { npcTurn(); }, 1500);
+        }
+    } else if (gameData.skipNextTurn === true) {
+        gameData.skipNextTurn = false;
+        if (gameData.index === 0) {
+            setUpTurn();
+        } else {
+            act.innerHTML = '<button id="roll" disabled>ROLL</button>';
+            rest.innerHTML = '<button id="rest-btn" disabled>REST</button>';
+            setTimeout(function() { npcTurn(); }, 1500);
+        }
+    } else {
+        gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 
-            if (gameData.index === 0) {
-                setTimeout(function() {
-                    contextbox.innerHTML += `<p>Your turn! Roll the dice!</p>`;
-                    setUpTurn();
-                }, 1000);
-            } else {
-                setTimeout(function() {
-                    contextbox.innerHTML += `<p>NPC's turn...</p>`;
-                }, 1000);
-                act.innerHTML = '<button id="roll" disabled>ROLL</button>';
-                setTimeout(function() {
-                     npcTurn(); 
-                    }, 2000);
-            }
+        if (gameData.index === 0) {
+            setTimeout(function() {
+                contextbox.innerHTML += `<p>Your turn! Roll the dice!</p>`;
+                setUpTurn();
+            }, 1000);
+        } else {
+            setTimeout(function() {
+                contextbox.innerHTML += `<p>NPC's turn...</p>`;
+            }, 1000);
+            act.innerHTML = '<button id="roll" disabled>ROLL</button>';
+            rest.innerHTML = '<button id="rest-btn" disabled>REST</button>';
+            setTimeout(function() { npcTurn(); }, 2000);
         }
     }
-
+}
     function checkPoisonDamage() {
         if (gameData.plPoisoned) {
             gameData.plHealth -= 5;

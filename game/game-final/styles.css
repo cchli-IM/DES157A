@@ -54,18 +54,23 @@ h1{
     gap: 12px;
     margin-bottom: 10px;
     min-height: 200px; 
+    padding-left: 20px;
 }
 
 #pl-info {
     flex: 2;
     padding: 30px 40px;
     box-sizing: border-box;
+    border: solid 6px #000000;
+     border-top:solid 10px black;
 }
 
 #slots{
     flex:3;
     padding: 10px;
     padding-top: 20px;
+    border: 6px solid #000000;
+     border-top:solid 10px black;
 }
 
 .character-visuals{
@@ -131,16 +136,20 @@ h1{
     height: 100%;
     box-sizing: border-box;
     padding: 1rem; 
-    background-color: #eee; 
+    background-color: rgb(216, 205, 205); 
     overflow-y: auto; 
+    border: double 5px #000000;
 }
 #rules-box {
     flex: 3;
     height: 100%;
     box-sizing: border-box;
     padding: 1rem;
+    padding-top: 0px;
     background-color: #eee;
     overflow-y: auto;
+    border: solid 6px #000000;
+    border-top:solid 10px black;
 }
 
 
@@ -201,7 +210,7 @@ h1{
 .health-bar-container {
     width: 400px;
     height: 25px;
-    background-color: #ccc;
+    background-color: #ff1e1e;
     border: 2px solid #000000;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -249,7 +258,7 @@ h1{
     width: 160px;
     height: 70px;
 }
-#rest:disabled {
+#rest button:disabled {
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;

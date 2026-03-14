@@ -26,7 +26,7 @@
         
     </section>
     <section id="intro-screen" class="hidden">
-            <h2 id="intro-question">Do you have what it takes to conquer the <strong>Great Ruins of Chrysalithia</strong>? <br> Your adventure begins now...</h2>
+            <h2 id="intro-question">Do you have what it takes to conquer the <strong>Great Ruins of Chrysalithia</strong>? <br> <br> <br> <br> <br> <br> Hint: When the context box overfills, you should scroll down to see the newest actions (There is no auto-scroll)</h2>
     </section>
    <!-- NPC Information -->
     <main id="game-screen" class="hidden">
@@ -52,59 +52,61 @@
                 <!-- Context Box -->
              
               <section id="context-box">
-                   <p>Proceed with caution!</p> <!-- Placeholder -->
+            
+                   <p>Proceed with caution!</p> 
               </section>
   
         </section>
          
 
-    <section id="lowerscreen">
-        <section id="pl-info">
-            <div id="player-frame-wrapper">
-                <img id="player-frame-img" src="images/playerframe.png" alt="">
-                <section class="character-visuals">
-                    <img src="images/playerpic.jpg" alt="Player Character">
-                </section>
-            </div>
-            <h2 id="pl-name">
-                Player: The Venerable Sir Orphaneater III
-            </h2>
-            <article id="pl-stats">
-                <h2>Health: <span id="pl-health-text">100/100</span></h2>
-                <section class="health-bar-container">
-                    <section id="pl-health-bar" class="health-bar"></section>
-                </section>
-                <h2>Status Effects: <span class="status-text"></span></h2>
-            </article>
-        </section>
+        <section id="lowerscreen">
+            <section id="pl-info">
+                <div id="player-frame-wrapper">
+                    <img id="player-frame-img" src="images/playerframe.png" alt="">
+                    <section class="character-visuals">
+                        <img src="images/playerpic.jpg" alt="Player Character">
+                    </section>
+                </div>
+                <h2 id="pl-name">
+                    Player: The Venerable Sir Orphaneater III
+                </h2>
+                <article id="pl-stats">
+                    <h2>Health: <span id="pl-health-text">100/100</span></h2>
+                    <section class="health-bar-container">
+                        <section id="pl-health-bar" class="health-bar"></section>
+                    </section>
+                    <h2>Status Effects: <span class="status-text"></span></h2>
+                </article>
+            </section>
 
-        <section id="slots">
-            <section id="dice"></section>
-            <div id="action">
-                <section id="act">
-                    <button id="roll">ROLL</button>
+            <section id="slots">
+                <div id="dice"></div>
+                <section id="action">
+                    <section id="act">
+                        <button id="roll">ROLL</button>
+                    </section>
+                    <section id="rest">
+                        <button id="rest-btn">REST</button>
+                    </section>
                 </section>
-                <section id="rest">
-                    <button id="rest-btn">REST</button>
-                </section>
-            </div>
-        </section>
+            </section>
 
-        <section id="rules-box">
-                <h3>Rules</h3>
-                <b>Roll 3 dice:</b>
-                <p>Match 2 to trigger an effect [41.67% chance]</p>
-                <p>Match 3 to automatically win (if player rolls) or lose (if NPC rolls) the game [2.78% chance]</p>
-                <b>Die Faces:</b>
-                <p>Attack — Deal 20 damage</p>
-                <p>Defense — Halve incoming damage (for that round only)</p>
-                <p>Heal — Recover 15 HP</p>
-                <p>Fortune — Roll again</p>
-                <p>Poison — Deal 5 damage for 2 turns</p>
-                <p>Sloth — Skip opponent's next turn</p>
-                <p>REST — Recover 10 HP and clear negative effects</p>
+            <section id="rules-box">
+                    <h3>Rules</h3>
+                    <b>Roll 3 dice:</b>
+                    <p>Match 2 to trigger an effect [41.67% chance]</p>
+                    <p>Match 3 to automatically win (if player rolls) or lose (if NPC rolls) the game [2.78% chance]</p>
+                    <b>Die Faces:</b>
+                    <p>Attack — Deal 20 damage</p>
+                    <p>Defense — Halve incoming damage (for that round only)</p>
+                    <p>Heal — Recover 15 HP</p>
+                    <p>Fortune — Roll again</p>
+                    <p>Poison — Deal 5 damage for 2 turns (if player is poisoned, rest to reset effects)</p>
+                    <p>Sloth — Skip opponent's next turn</p>
+                    <p>REST — Recover 10 HP and clear negative effects</p>
+                    <p>Note: This game is purely based on chance, so some rounds can be quick while others can drag on!</p>
+            </section>
         </section>
-    </section>
 
              
                       

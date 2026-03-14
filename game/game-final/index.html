@@ -50,50 +50,64 @@
                     </section>
                 </div>
                 <!-- Context Box -->
-                <section id="context-box">
-                    <p>Proceed with caution!</p> <!-- Placeholder -->
-                </section>
-            </section>
+             
+              <section id="context-box">
+                   <p>Proceed with caution!</p> <!-- Placeholder -->
+              </section>
+  
+        </section>
          
 
-            <section id="lowerscreen">
-                <section id="pl-info">
-                    <section class="character-visuals">
-                        <img src="images/playerpic.jpg" alt="Player Character">
-                    </section>
-                    <h2 id="pl-name"> 
-                       Player: The Venerable Sir Orphaneater III
-                    </h2>
-                    <article id="pl-stats">
-                        <h2>Health: <span id="pl-health-text">100/100</span></h2>
-                        <section class="health-bar-container">
-                            <section id="pl-health-bar" class="health-bar"></section>
-                        </section>
-                        <h2>
-                            Status Effects: <span class="status-text"></span>
-                        </h2>
-                    </article>
+    <section id="lowerscreen">
+        <section id="pl-info">
+            <div id="player-frame-wrapper">
+                <img id="player-frame-img" src="images/playerframe.png" alt="">
+                <section class="character-visuals">
+                    <img src="images/playerpic.jpg" alt="Player Character">
                 </section>
-
-            
-                
-            
-                <section id="slots">
-                    
-                    <section id="dice">
-
-                    </section>
-                    <div id="flex"> <section id="act">
-                        
-                    </section>
-
-                    <section id="rest">
-
-                    </section></div>
-                   
-                    
+            </div>
+            <h2 id="pl-name">
+                Player: The Venerable Sir Orphaneater III
+            </h2>
+            <article id="pl-stats">
+                <h2>Health: <span id="pl-health-text">100/100</span></h2>
+                <section class="health-bar-container">
+                    <section id="pl-health-bar" class="health-bar"></section>
                 </section>
-             </section>
+                <h2>Status Effects: <span class="status-text"></span></h2>
+            </article>
+        </section>
+
+        <section id="slots">
+            <section id="dice"></section>
+            <div id="action">
+                <section id="act">
+                    <button id="roll">ROLL</button>
+                </section>
+                <section id="rest">
+                    <button id="rest-btn">REST</button>
+                </section>
+            </div>
+        </section>
+
+        <section id="rules-box">
+                <h3>Rules</h3>
+                <b>Roll 3 dice:</b>
+                <p>Match 2 to trigger an effect [41.67% chance]</p>
+                <p>Match 3 to automatically win (if player rolls) or lose (if NPC rolls) the game [2.78% chance]</p>
+                <b>Die Faces:</b>
+                <p>Attack — Deal 20 damage</p>
+                <p>Defense — Halve incoming damage (for that round only)</p>
+                <p>Heal — Recover 15 HP</p>
+                <p>Fortune — Roll again</p>
+                <p>Poison — Deal 5 damage for 2 turns</p>
+                <p>Sloth — Skip opponent's next turn</p>
+                <p>REST — Recover 10 HP and clear negative effects</p>
+        </section>
+    </section>
+
+             
+                      
      </main>
 
      <footer>

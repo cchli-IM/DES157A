@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    font-family: "Grenze", serif;
 }
 
 .show{
@@ -48,18 +49,27 @@ h1{
     display: flex;
 }
 
-#pl-info {
-    flex:1;
-}
-#slots{
-    flex:2;
-    padding: 10px;
-}
-
 #dice {
     display: flex;
     gap: 12px;
     margin-bottom: 10px;
+    min-height: 200px; 
+}
+
+#pl-info {
+    flex: 2;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+#slots{
+    flex:3;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.character-visuals{
+    padding-bottom: 20px;
 }
 
 #npc-frame-wrapper {
@@ -90,7 +100,7 @@ h1{
     flex-direction: row;
     align-items: center;
     gap: 16px;
-    padding: 20px 60px 20px 20px;
+    padding: 20px 60px 20px 250px;
     box-sizing: border-box;
 }
 
@@ -124,6 +134,15 @@ h1{
     background-color: #eee; 
     overflow-y: auto; 
 }
+#rules-box {
+    flex: 3;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #eee;
+    overflow-y: auto;
+}
+
 
 #intro-screen{
     color: #eee;
@@ -197,8 +216,8 @@ h1{
     position: relative;
 }
 #roll {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 40px;
+    font-size: 24px;
     font-weight: bold;
     background-color: #007bff;
     color: white;
@@ -206,9 +225,11 @@ h1{
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 8px;
-    width: 100px;
+    width: 160px;
+    height: 70px;
+    margin:0 ;
 }
+
 #roll:disabled {
     background-color: #ccc;
     color: #666;
@@ -217,15 +238,16 @@ h1{
 }
 
 #rest button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 40px;
+    font-size: 24px;
     font-weight: bold;
     background-color: #e0dd47;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100px;
+    width: 160px;
+    height: 70px;
 }
 #rest:disabled {
     background-color: #ccc;
@@ -234,8 +256,12 @@ h1{
     opacity: 0.6;
 }
 
-#flex {
+#action {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
 }
 
 .npc-visuals{
@@ -244,6 +270,22 @@ h1{
     flex: 1;
     height: auto;
     padding-left: 30px;
+}
+
+#player-frame-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+#player-frame-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .character-visuals {
@@ -256,16 +298,34 @@ h1{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    z-index: 1;
+}
+
+#bgm-btn {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    border: 3px solid black;
+    font-family: "Grenze", serif;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
 }
 
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
     background-color: #333;
     color: white;
     padding: 10px;
-    text-align: center;
+   
 }
 
 footer a {

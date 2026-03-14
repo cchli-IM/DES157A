@@ -16,7 +16,7 @@
 
     const bgmBtn = document.querySelector("#bgm-btn");
     const bgmSound = new Audio('sounds/bgm.mp3');
-    const dieSound = new Audio('sounds/die.mp3');
+    const dieSound = new Audio('sounds/dicesound.mp3');
    
 
     bgmBtn.addEventListener('mousedown', function () {
@@ -28,6 +28,7 @@
         dieFace: ['images/attack.jpg','images/defense.jpg', 'images/heal.jpg','images/fortune.jpg', 'images/poison.jpg', 'images/sloth.jpg'],
         roll1: 0,
         roll2: 0,
+        roll3: 0,
         plHealth: 100,
         npcHealth: 100,
         gameEnd: 0,
@@ -84,25 +85,36 @@
     }
 
     function throwDice(){
-        dieSound.play();
+         dieSound.play();
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
+        gameData.roll3 = Math.floor(Math.random() * 6) + 1;
         dice.innerHTML = `<img src="${gameData.dieFace[gameData.roll1-1]}"> 
-                            <img src="${gameData.dieFace[gameData.roll2-1]}">`;
+                        <img src="${gameData.dieFace[gameData.roll2-1]}">
+                        <img src="${gameData.dieFace[gameData.roll3-1]}">`;
         checkForMatch();
     }
 
-    function checkForMatch() {
-        const effects = [attack, defense, heal, fortune, poison, sloth];
+  function checkForMatch() {
+    const effects = [attack, defense, heal, fortune, poison, sloth];
 
-        if (gameData.roll1 === gameData.roll2) {
-            effects[gameData.roll1 - 1]();
+    if (gameData.roll1 === gameData.roll2 && gameData.roll2 === gameData.roll3) {
+          if (gameData.index === 1) {
+        endGame(false);
         } else {
-            contextbox.innerHTML += `<p>But nothing happened...</p>`;
+            endGame(true);
         }
-
-        switchTurn();
+        return;
+    } else if (gameData.roll1 === gameData.roll2 || gameData.roll1 === gameData.roll3) {
+        effects[gameData.roll1 - 1]();
+    } else if (gameData.roll2 === gameData.roll3) {
+        effects[gameData.roll2 - 1]();
+    } else {
+        contextbox.innerHTML += `<p>But nothing happened...</p>`;
     }
+
+    switchTurn();
+}
 
     function performRest() {
         const allStatusTexts = document.querySelectorAll('.status-text');
@@ -312,19 +324,17 @@
         }
     }
 
-    function endGame(playerWon) {
-        act.innerHTML = '';
-        rest.innerHTML = '';
-        dice.innerHTML = '';
-        if (playerWon) {
-            npcImg.src = 'images/goblindefeat.png';
-            contextbox.innerHTML += `<p><strong>You defeated the enemy! Victory!</strong></p>`;
-        } else {
-            npcImg.src = 'images/goblinwin.png';
-            contextbox.innerHTML += `<p><strong>You have been defeated... Game Over.</strong></p>`;
-        }
-        gameData.gameEnd = 1;
+   function endGame(playerWon) {
+    act.innerHTML = '';
+    rest.innerHTML = '';
+    if (playerWon) {
+        npcImg.src = 'images/goblindefeat.png';
+        contextbox.innerHTML += `<p><strong>You defeated the enemy! Victory!</strong></p>`;
+    } else {
+        npcImg.src = 'images/goblinwin.png';
+        contextbox.innerHTML += `<p><strong>You have been defeated... Game Over.</strong></p>`;
     }
-
+    gameData.gameEnd = 1;
+}
 })()
 

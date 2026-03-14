@@ -222,12 +222,12 @@
     function defense() {
         if (gameData.index === 0) {
             gameData.plDefending = true;
-            plStatus.innerHTML = '<span>Defending!</span>';
+            plStatus.innerHTML = '<p>Defending!</p>';
             npcImg.src = 'images/goblinstand.png';
             contextbox.innerHTML += `<p>You brace for impact! Incoming damage halved this round.</p>`;
         } else {
             gameData.npcDefending = true;
-            npcStatus.innerHTML = '<span>Defending!</span>';
+            npcStatus.innerHTML = '<p>Defending!</p>';
             npcImg.src = 'images/goblinblock.png';
             contextbox.innerHTML += `<p>NPC braces! Incoming damage halved this round.</p>`;
         }
@@ -247,11 +247,11 @@
     function fortune() {
         gameData.extraTurn = true;
         if (gameData.index === 0) {
-            plStatus.innerHTML = '<span>Lucky!</span>';
+            plStatus.innerHTML = '<p>Lucky!</p>';
             npcImg.src = 'images/goblinstand.png';
             contextbox.innerHTML += `<p>Fortune smiles! You get another turn!</p>`;
         } else {
-            npcStatus.innerHTML = '<span>Lucky!</span>';
+            npcStatus.innerHTML = '<p>Lucky!</p>';
             npcImg.src = 'images/goblinfortune.png';
             contextbox.innerHTML += `<p>Fortune smiles on the NPC! It gets another turn!</p>`;
         }
@@ -261,7 +261,7 @@
         if (gameData.index === 0) {
             gameData.npcPoisoned = true;
             gameData.npcPoisonRounds = 2;
-            npcStatus.innerHTML = '<span>Poisoned!</span>';
+            npcStatus.innerHTML = '<p>Poisoned!</p>';
             npcImg.src = 'images/goblinpoison.png';
             setTimeout(function() { 
                 npcImg.src = 'images/goblinstand.png'; 
@@ -270,7 +270,7 @@
         } else {
             gameData.plPoisoned = true;
             gameData.plPoisonRounds = 2;
-            plStatus.innerHTML = '<span>Poisoned!</span>';
+            plStatus.innerHTML = '<p>Poisoned!</p>';
             npcImg.src = 'images/goblinattack.png';
             setTimeout(
                 function() { npcImg.src = 'images/goblinstand.png'; 
@@ -282,14 +282,14 @@
     function sloth() {
         gameData.skipNextTurn = true;
         if (gameData.index === 0) {
-            npcStatus.innerHTML = '<span>Sloth!</span>';
+            npcStatus.innerHTML = '<p>Sloth!</p>';
             npcImg.src = 'images/goblinsloth.png';
             setTimeout(function() { 
                 npcImg.src = 'images/goblinstand.png'; 
             }, 2000);
             contextbox.innerHTML += `<p>Sloth! The NPC loses its next turn!</p>`;
         } else {
-            plStatus.innerHTML = '<span>Sloth!</span>';
+            plStatus.innerHTML = '<p>Sloth!</p>';
             npcImg.src = 'images/goblinsloth.png';
             setTimeout(function() {
                  npcImg.src = 'images/goblinstand.png'; 
